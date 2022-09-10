@@ -1,12 +1,5 @@
 # Heytel-api
-[![Build Status](https://travis-ci.org/heytel/heytel-api.svg?branch=master)](https://travis-ci.org/heytel/heytel-api)
-[![Coverage Status](https://coveralls.io/repos/github/heytel/heytel-api/badge.svg?branch=master)](https://coveralls.io/github/heytel/heytel-api?branch=master)
-[![Code Climate](https://codeclimate.com/github/heytel/heytel-api/badges/gpa.svg)](https://codeclimate.com/github/heytel/heytel-api)
-[![Dependency Status](https://gemnasium.com/badges/github.com/heytel/heytel-api.svg)](https://gemnasium.com/github.com/heytel/heytel-api)
-[![Inline docs](http://inch-ci.org/github/heytel/heytel-api.svg?branch=master)](http://inch-ci.org/github/heytel/heytel-api)
-
-## Description
-This is the API for the Heytel project. It is written in Gin and uses Gorm for database access.
+Heytel-api is api for the Heytel project. It is written in Golang using Gin framework. It is a RESTful API that provides endpoints for the Heytel project. 
 
 ## Installation
 
