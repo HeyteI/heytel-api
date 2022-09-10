@@ -1,0 +1,209 @@
+info:
+  contact: {}
+paths:
+  /api/secured/invoice/:
+    get:
+      consumes:
+      - application/json
+      description: gets invoice by id
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: get invoice by id
+      tags:
+      - invoice
+    patch:
+      consumes:
+      - application/json
+      description: update invoice data by it's id
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: update invoice
+      tags:
+      - invoice
+    post:
+      consumes:
+      - application/json
+      description: creates invoice
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: creating invoice
+      tags:
+      - invoice
+  /api/secured/invoice/all:
+    get:
+      consumes:
+      - application/json
+      description: get all saved invoices
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: get all invoices
+      tags:
+      - invoice
+  /api/secured/room/:
+    get:
+      consumes:
+      - application/json
+      description: gets room by id
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: get room by id
+      tags:
+      - room
+    patch:
+      consumes:
+      - application/json
+      description: update room data by it's id
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: update room
+      tags:
+      - room
+    post:
+      consumes:
+      - application/json
+      description: creates room
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: create room
+      tags:
+      - room
+  /api/secured/room/all:
+    get:
+      consumes:
+      - application/json
+      description: get all saved rooms
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: get all rooms
+      tags:
+      - room
+  /api/secured/room/floor/:
+    get:
+      consumes:
+      - application/json
+      description: get all rooms by it's floor
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: get all rooms by it's floor
+      tags:
+      - room
+  /api/secured/room/floors/:
+    get:
+      consumes:
+      - application/json
+      description: get count of floors
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: get count of floors
+      tags:
+      - room
+  /api/secured/user/:
+    get:
+      consumes:
+      - application/json
+      description: get user by id
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: get user by id
+      tags:
+      - user
+    patch:
+      consumes:
+      - application/json
+      description: update user data by it's id
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: update user
+      tags:
+      - user
+  /api/user/login:
+    post:
+      consumes:
+      - application/json
+      description: login to users account
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: login user
+      tags:
+      - user
+  /api/user/register:
+    post:
+      consumes:
+      - application/json
+      description: create user account
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: create user
+      tags:
+      - user
+swagger: "2.0"
