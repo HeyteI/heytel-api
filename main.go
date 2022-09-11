@@ -168,5 +168,10 @@ func main() {
 	}
 
 	router := initRouter()
-	router.Run(":8080")
+
+	if os.Getenv("WEBSERVER_SSL") == "true" {
+		router.RunTLS("api.heytel.local:8080", os.Getenv("SSL_CRT_FILE"), os.Getenv("SSL_KEY_FILE"))
+	} else {
+		router.Run(":8080")
+	}
 }
