@@ -38,8 +38,14 @@ func RegisterUser(ctx *gin.Context) {
 
 	log.Print(data)
 
-	if data["group"] != "customer" && ctx.GetHeader("authorization") != os.Getenv("OWNER_AUTHORIZATION_KEY") {
+	if ctx.GetHeader("authorization") != os.Getenv("OWNER_AUTHORIZATION_KEY") {
 		ctx.JSON(http.StatusUnauthorized, gin.H{"error": "You got no permissions to do that."})
+		ctx.Abort()
+		return
+	}
+
+	if data["group"] != "customer" && os.Getenv("ALLOW_ADMIN_REGISTRATION") != "true" {
+		ctx.JSON(http.StatusUnauthorized, gin.H{"error": "Admin account's cant be registered because of settings."})
 		ctx.Abort()
 		return
 	}
